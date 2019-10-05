@@ -50,28 +50,28 @@ class LSTMcell(object):
             in_dim (int): dimension of input
             out_dim (int): dimension of internal state and output
         """
-        # internal state
+        # internal state.
         self.s = np.zeros((1, out_dim))
 
-        # parameters for input node g
-        # wgx - weight for input x
-        # wgh - weight for previous state
-        # bg - biases
+        # parameters for input node g.
+        # wgx - weight for input x.
+        # wgh - weight for previous state.
+        # bg - biases.
         self.wgx = np.zeros((in_dim, out_dim))
         self.wgh = np.zeros((out_dim, out_dim))
         self.bg = np.zeros((1, out_dim))
 
-        # parameters for input gate i
+        # parameters for input gate i.
         self.wix = np.zeros((in_dim, out_dim))
         self.wih = np.zeros((out_dim, out_dim))
         self.bi = np.zeros((1, out_dim))
 
-        # parameters for forget gate f
+        # parameters for forget gate f.
         self.wfx = np.zeros((in_dim, out_dim))
         self.wfh = np.zeros((out_dim, out_dim))
         self.bf = np.zeros((1, out_dim))
 
-        # parameters for output gate o 
+        # parameters for output gate o.
         self.wox = np.zeros((in_dim, out_dim))
         self.woh = np.zeros((out_dim, out_dim))
         self.bo = np.zeros((1, out_dim))
